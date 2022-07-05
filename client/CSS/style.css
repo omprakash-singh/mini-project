@@ -64,18 +64,12 @@ body {
   position: relative;
   top: 10rem;
 }
-.listitem {
+.item {
   list-style: none;
   font-size: 1.5rem;
 }
-.item1 {
-  display: flex;
-  gap: 0.9rem;
-}
-.item2 {
-  display: flex;
-  gap: 0.9rem;
-}
+.item1,
+.item2,
 .item3 {
   display: flex;
   gap: 0.9rem;
@@ -88,7 +82,10 @@ body {
   position: relative;
   top: -0.8rem;
 }
-
+.icon--3 {
+  width: 1.89rem;
+  height: 1.89rem;
+}
 .thirdbtn {
   text-decoration: none;
   border: 1px solid #fe8c26;
