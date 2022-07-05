@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+.button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.2rem;
+}
+.btn {
+  text-decoration: none;
+  border: 1px solid #fe8c26;
+  color: #fe8c26;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  margin-top: 2rem;
+  /* font-weight: 20px; */
+  border-radius: 4px;
+}
+.btn:hover,
+.btn:active {
+  background-color: #fe8c26;
+  color: #fff;
+}
+.heading {
+  font-size: 4.5rem;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #555;
+}
+.heading--2 {
+  margin-bottom: 4rem;
+  font-weight: normal;
+}
+.image {
+  height: auto;
+  width: 55rem;
+  position: relative;
+  left: 4.6rem;
+}
+.display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 13.8rem; */
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.content {
+  position: relative;
+  top: 10rem;
+}
+.listitem {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.item1 {
+  display: flex;
+  gap: 0.9rem;
+}
+.item2 {
+  display: flex;
+  gap: 0.9rem;
+}
+.item3 {
+  display: flex;
+  gap: 0.9rem;
+}
+.icon {
+  stroke: #2ebe66;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 2.4rem;
+  position: relative;
+  top: -0.8rem;
+}
+
+.thirdbtn {
+  text-decoration: none;
+  border: 1px solid #fe8c26;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1.8rem 2rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.thirdbtn:link,
+.thirdbtn:visited {
+  background-color: #fe8c26;
+  color: #fff;
+}
+.thirdbtn:hover,
+.thirdbtn:active {
+  background-color: #cf711f;
+}
