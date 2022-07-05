@@ -1,9 +1,20 @@
-const express = require('express');
+const mogoose = require('mongoose');
+const app = require('./server')
 
-const app = express();
+const DB = "mongodb+srv://mini-project:turh9Iefu1CqDsfR@cluster0.flzb65k.mongodb.net/?retryWrites=true&w=majority"      // this is database url
 
-app.get('/', (req, res) => {
-     res.send("this is home page")
+mogoose.connect(DB, {
+     useCreateIndex: true,
+     useFindAndModify: true,
+     useUnifiedTopology: true,
+     useNewUrlParser: true
+}).then(() => {
+     console.log("Database connect Sucessfully...");
+}).catch((err) => {
+     console.log("Something is error in database..");
+     console.log(err);
 })
 
-app.listen(9000);
+app.listen(9000, () => {
+     console.log('server run at port 9000')
+});
