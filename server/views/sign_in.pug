@@ -1,0 +1,36 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='CSS/design.css')
+.container
+  .img-btn
+    .img
+      img.image(src='img/resbuild.svg' alt='')
+    .btn
+      a.button(href='#') Sign in
+  .content
+    .hearder
+      h1.heading SIGN IN
+      p.paragraph Log in to your account
+    nav
+      .btn-2
+        a.log-in.fb(href='#') Sign in with facebook
+        a.log-in.google(href='#') Sign in with Google
+      .break
+        hr.line
+        hr.line
+      p.or or
+    form(action='form')
+      input.box(type='email' placeholder='your email')
+      br
+      input.box(type='Password' placeholder='Your Password')
+      br
+      a.btn-3(href='#') LOG IN
+      footer
+        a.forgot-password(href='#') I forgot my password
+        p.create
+          | Don&apos;t have account? 
+          a.create-one(href='#') Create one

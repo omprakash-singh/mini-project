@@ -1,7 +1,9 @@
 const mogoose = require('mongoose');
 const app = require('./server')
 
-const DB = "mongodb+srv://mini-project:turh9Iefu1CqDsfR@cluster0.flzb65k.mongodb.net/?retryWrites=true&w=majority"      // this is database url
+const DB = "mongodb+srv://mini-project:turh9Iefu1CqDsfR@cluster0.flzb65k.mongodb.net/mini-project-4th-sem";      // this is database url
+
+//mongodb+srv://mini-project:turh9Iefu1CqDsfR@cluster0.flzb65k.mongodb.net/test
 
 mogoose.connect(DB, {
      useCreateIndex: true,

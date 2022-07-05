@@ -3,6 +3,7 @@ const bodyparser = require('body-parser');
 const path = require('path');
 const session = require('express-session');
 const passport = require('passport');
+const route = require('./routes/Route');
 
 const app = express();
 app.set('view engine', 'pug');
@@ -18,8 +19,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/', (req, res) => {
-     res.send("this is home page")
-});
+// app.get('/', (req, res) => {
+//      res.send("this is home page")
+// });
+
+
+app.use('/', route);
+
 
 module.exports = app;
