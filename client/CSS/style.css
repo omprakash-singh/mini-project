@@ -9,16 +9,24 @@ html {
 }
 body {
   font-family: "rubik", sans-serif;
-  line-height: 1;
   font-weight: 400;
   color: #555;
 }
-.button {
+.logo {
+  height: auto;
+  width: 12rem;
+}
+.headline1 {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.button-up {
+  display: flex;
+  /* justify-content: flex-end; */
   gap: 1.2rem;
 }
-.btn {
+.up-btn {
   text-decoration: none;
   border: 1px solid #fe8c26;
   color: #fe8c26;
@@ -29,8 +37,8 @@ body {
   /* font-weight: 20px; */
   border-radius: 4px;
 }
-.btn:hover,
-.btn:active {
+.up-btn:hover,
+.up-btn:active {
   background-color: #fe8c26;
   color: #fff;
 }
@@ -38,7 +46,7 @@ body {
   font-size: 4.5rem;
   line-height: 1.05;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #555;
 }
 .heading--2 {
@@ -51,16 +59,16 @@ body {
   position: relative;
   left: 4.6rem;
 }
-.display {
+.displaying {
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* gap: 13.8rem; */
 }
-.container {
+.contain {
   max-width: 120rem;
   margin: 0 auto;
 }
-.content {
+.contents {
   position: relative;
   top: 10rem;
 }
