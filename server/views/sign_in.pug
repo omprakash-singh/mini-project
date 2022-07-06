@@ -23,12 +23,12 @@ head
         hr.line
         hr.line
       p.or or
-    form(action='form')
-      input.box(type='email' placeholder='your email')
+    form(action='/sign-in', method="post")
+      input.box(type='email' placeholder='your email', name='email')
       br
-      input.box(type='Password' placeholder='Your Password')
+      input.box(type='Password' placeholder='Your Password', name='password')
       br
-      a.btn-3(href='#') LOG IN
+      button.btn-3(type="submit") LOG IN
       footer
         a.forgot-password(href='#') I forgot my password
         p.create
