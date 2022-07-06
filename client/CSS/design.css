@@ -7,7 +7,7 @@ html {
   font-size: 62.5%;
 }
 .container {
-  width: 120rem;
+  max-width: 120rem;
   margin: 1rem auto;
 }
 .content {
@@ -143,4 +143,10 @@ html {
 .create-one {
   text-decoration: none;
   color: #2ebe6e;
+}
+.div {
+  background-color: blue;
+  height: 300px;
+  width: 1500px;
+  margin: 0px 0px;
 }
