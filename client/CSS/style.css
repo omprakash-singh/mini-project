@@ -36,11 +36,14 @@ body {
   margin-top: 2rem;
   /* font-weight: 20px; */
   border-radius: 4px;
+  transition: all 0.4s;
+  font-family: sans-serif;
 }
 .up-btn:hover,
 .up-btn:active {
   background-color: #fe8c26;
   color: #fff;
+  text-decoration: underline #fff;
 }
 .heading {
   font-size: 4.5rem;
