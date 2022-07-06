@@ -40,7 +40,11 @@ user.pre('save', async (next) => {
 
      this.confirmPassword = undefined;
      next();
-})
+});
+
+user.method.correctPassword = async (candidatePassword, userPassword) => {
+     return await bcrypt.compare(candidatePassword, userPassword);
+}
 
 const User = mongoose.model("User", user);
 
