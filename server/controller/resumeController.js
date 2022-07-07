@@ -1,6 +1,6 @@
 const passport = require('passport');
 const session = require('express-session');
-
+const resume = require('../Model/resumeModel');
 
 exports.GetHomePage = (req, res) => {
      let loginUser = null
@@ -10,5 +10,14 @@ exports.GetHomePage = (req, res) => {
      res.render('index', {
           loginUser
      });
-     console.log(loginUser);
+}
+
+const Post_user_detail = async (req, res) => {
+     await resume.create(req.body, function (err, doc) {
+          if (err) {
+               console.log(err);
+          } else {
+               console.log(doc);
+          }
+     })
 }
