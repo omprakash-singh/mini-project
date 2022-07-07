@@ -1,8 +1,5 @@
 const userModel = require('../Model/userModel');
 
-exports.getUser = (req, res) => {
-     res.render('sign_in');
-}
 exports.checkAuthenticated = (req, res, next) => {
      if (req.isAuthenticated()) {
           return next();
@@ -16,3 +13,18 @@ exports.checkNotAuthenticated = (req, res, next) => {
      }
      next();
 }
+
+exports.getUser = (req, res) => {
+     res.render('sign_in');
+}
+
+exports.sign_up_get = (req, res) => {
+     res.render('sign_up');
+}
+
+exports.logout = (req, res, next) => {
+     req.logout(function (err) {
+          if (err) { return next(err); }
+          res.redirect('/');
+     });
+};

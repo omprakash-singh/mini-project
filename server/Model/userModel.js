@@ -3,7 +3,7 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 
 
-const user = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
      name: {
           type: String,
           required: [true, 'Please enter name'],
@@ -33,7 +33,7 @@ const user = new mongoose.Schema({
      }
 });
 
-user.pre('save', async (next) => {
+userSchema.pre('save', async function (next) {
      if (!this.isModified('password')) return next();
 
      this.password = await bcrypt.hash(this.password, 12);
@@ -42,10 +42,10 @@ user.pre('save', async (next) => {
      next();
 });
 
-user.method.correctPassword = async (candidatePassword, userPassword) => {
+userSchema.methods.correctPassword = async function (candidatePassword, userPassword) {
      return await bcrypt.compare(candidatePassword, userPassword);
 }
 
-const User = mongoose.model("User", user);
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;

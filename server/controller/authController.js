@@ -4,7 +4,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
 
 async function authenticateUser(email, password, done) {
-     const user = await User.findOne({ email: email });
+     const user = await User.findOne({ email }).select("+password");
      if (user === null) {
           return done(null, false, { message: "User Not with that email!" });
      }
@@ -27,8 +27,7 @@ passport.deserializeUser((id, done) => {
 });
 
 
-
-const sign_up = async (req, res) => {
+exports.sign_up_post = async (req, res) => {
      try {
           const postUser = new User({
                name: req.body.name,
