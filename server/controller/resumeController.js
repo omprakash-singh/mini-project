@@ -6,6 +6,7 @@ exports.GetHomePage = (req, res) => {
      let loginUser = null
      if (req.session.passport != null) {
           loginUser = req.session.passport.user;
+          console.log(loginUser);
      }
      res.render('index', {
           loginUser

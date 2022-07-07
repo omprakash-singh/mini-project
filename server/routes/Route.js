@@ -27,4 +27,14 @@ Route
      .route('/logout')
      .post(userController.logout);
 
+Route
+     .route('/auth/google/callback')
+     .get(passport.authenticate('google', {
+          failureRedirect: '/sign-in'
+     }), function (req, res) {
+          res.redirect('/');
+     });
+
+Route.route('/auth/google').get(passport.authenticate('google', { scope: ['profile'] }))
+
 module.exports = Route;
