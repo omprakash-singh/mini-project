@@ -37,6 +37,10 @@ body {
   /* font-weight: 20px; */
   border-radius: 4px;
 }
+.button-up form button{
+  background: transparent;
+  cursor: pointer;
+}
 .up-btn:hover,
 .up-btn:active {
   background-color: #fe8c26;
