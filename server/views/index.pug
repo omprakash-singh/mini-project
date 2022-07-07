@@ -13,7 +13,11 @@ head
     img.logo(src='img/resbuild.svg ' alt='')
     nav
       .button-up
-        a.up-btn(href='/sign-in') Sign in
+        -if(loginUser != null)
+          form(action="/logout", method="post")
+            button.up-btn(type="submit") LogOut 
+        -else 
+           a.up-btn(href='/sign-in') Sign in
         a.up-btn(href='#') Build resume
   section
     .displaying

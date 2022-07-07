@@ -1,0 +1,46 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='CSS/design.css')
+.container
+  .img-btn
+    .img
+      img.image(src='img/resbuild.svg' alt='image')
+    .btn
+      a.sign-in-btn(href='/sign-in') Sign in
+  .content
+    .hearder
+      h1.heading1.heading--1 SIGN UP
+      h2.heading2
+        | Create a FREE Account to Download your Document
+      p.para
+        | Unlimited Downloads, Shares, and Printing. Join 1.5 million
+      p.para.para-sub monthly users using this tool.
+    nav
+      .btn-2
+        a.log-in.fb(href='#') Sign in with facebook
+        a.log-in.google(href='#') Sign in with Google
+      .break
+        hr.line
+        hr.line
+      p.or or
+    form(action='/sign-up', method='post')
+      input.box(type='text' placeholder=' Your Name', name="name")
+      br
+      input.box(type='email' placeholder=' Your email address', name='email')
+      br
+      input.box(type='Password' placeholder=' Set Your Password' , name='password')
+      br
+      input.box(type='Password' placeholder=' conform Your Password', name='confirmPassword')
+      br
+      p.terms
+        | I agree to the
+        a(href='#')  terms and condition
+      button.btn-3(type="submit") SIGN UP
+      footer
+        p.have-an-account
+          | Already have an account?
+          a.sign-to-page(href='/sign-in') Sign in

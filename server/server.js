@@ -4,6 +4,7 @@ const path = require('path');
 const session = require('express-session');
 const passport = require('passport');
 const route = require('./routes/Route');
+const flash = require('flash');
 
 const app = express();
 app.set('view engine', 'pug');
@@ -18,7 +19,12 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
+
+
 app.use('/', route);
+
+
 
 
 module.exports = app;
