@@ -1,8 +1,14 @@
 const mongoose = require('mongoose');
 const findOrCreate = require('mongoose-findorcreate');
 
-const userGoogleSchema = new mongoose.Schema({
-     sub: {
+const userGoogleFBSchema = new mongoose.Schema({
+     googleID: {
+          type: String
+     },
+     facebookID: {
+          type: String
+     },
+     provider: {
           type: String
      },
      name: {
@@ -29,8 +35,8 @@ const userGoogleSchema = new mongoose.Schema({
           type: String
      }
 })
-userGoogleSchema.plugin(findOrCreate);
+userGoogleFBSchema.plugin(findOrCreate);
 
-const USERGOOGLE = mongoose.model('USERGOOGLE', userGoogleSchema);
+const USERGOOGLEFB = mongoose.model('USERGOOGLEFB', userGoogleFBSchema);
 
-module.exports = USERGOOGLE;
+module.exports = USERGOOGLEFB;
