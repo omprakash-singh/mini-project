@@ -27,4 +27,28 @@ Route
      .route('/logout')
      .post(userController.logout);
 
+Route
+     .route('/auth/google/callback')
+     .get(passport.authenticate('google', {
+          failureRedirect: '/sign-in'
+     }), function (req, res) {
+          res.redirect('/');
+     });
+
+Route
+     .route('/auth/google')
+     .get(passport.authenticate('google', { scope: ['email', 'profile'] }))
+
+Route
+     .route('/auth/facebook')
+     .get(passport.authenticate('facebook'))
+
+Route
+     .route('/auth/facebook/callback')
+     .get(passport.authenticate('facebook', {
+          failureRedirect: '/login'
+     }), function (req, res) {
+          res.redirect('/');
+     })
+
 module.exports = Route;

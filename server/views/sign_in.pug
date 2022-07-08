@@ -8,7 +8,8 @@ head
 .container
   .img-btn
     .img
-      img.image(src='img/resbuild.svg' alt='')
+      a(href="/") 
+        img.image(src='img/resbuild.svg' alt='')
     .btn
       a.button(href='#') Sign in
   .content
@@ -17,8 +18,8 @@ head
       p.paragraph Log in to your account
     nav
       .btn-2
-        a.log-in.fb(href='#') Sign in with facebook
-        a.log-in.google(href='#') Sign in with Google
+        a.log-in.fb(href='/auth/facebook') Sign in with facebook
+        a.log-in.google(href='/auth/google') Sign in with Google
       .break
         hr.line
         hr.line

@@ -8,7 +8,8 @@ head
 .container
   .img-btn
     .img
-      img.image(src='img/resbuild.svg' alt='image')
+      a(href="/") 
+        img.image(src='img/resbuild.svg' alt='image')
     .btn
       a.sign-in-btn(href='/sign-in') Sign in
   .content
@@ -21,8 +22,8 @@ head
       p.para.para-sub monthly users using this tool.
     nav
       .btn-2
-        a.log-in.fb(href='#') Sign in with facebook
-        a.log-in.google(href='#') Sign in with Google
+        a.log-in.fb(href='/auth/facebook') Sign in with facebook
+        a.log-in.google(href='/auth/google') Sign in with Google
       .break
         hr.line
         hr.line
