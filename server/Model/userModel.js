@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
-const findOrCreate = require('mongoose-findorcreate');
 
 
 const userSchema = new mongoose.Schema({
@@ -34,7 +33,6 @@ const userSchema = new mongoose.Schema({
      }
 });
 
-userSchema.plugin(findOrCreate);
 
 userSchema.pre('save', async function (next) {
      if (!this.isModified('password')) return next();

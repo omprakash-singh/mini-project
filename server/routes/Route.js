@@ -35,6 +35,20 @@ Route
           res.redirect('/');
      });
 
-Route.route('/auth/google').get(passport.authenticate('google', { scope: ['profile'] }))
+Route
+     .route('/auth/google')
+     .get(passport.authenticate('google', { scope: ['email', 'profile'] }))
+
+Route
+     .route('/auth/facebook')
+     .get(passport.authenticate('facebook'))
+
+Route
+     .route('/auth/facebook/callback')
+     .get(passport.authenticate('facebook', {
+          failureRedirect: '/login'
+     }), function (req, res) {
+          res.redirect('/');
+     })
 
 module.exports = Route;

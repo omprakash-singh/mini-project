@@ -1,12 +1,18 @@
 const passport = require('passport');
 const session = require('express-session');
 const resume = require('../Model/resumeModel');
+const USERGOOGLE = require('../Model/userGoogleModel');
+const USERFACBOOK = require('../Model/userFacebookModel');
 
-exports.GetHomePage = (req, res) => {
+exports.GetHomePage = async (req, res) => {
      let loginUser = null
      if (req.session.passport != null) {
           loginUser = req.session.passport.user;
-          console.log(loginUser);
+          if (req.session.passport.user.provider === "google") {
+               await USERGOOGLE.findOrCreate(req.session.passport.user._json);
+          } else {
+               await USERFACBOOK.findOrCreate(req.session.passport.user._json);
+          }
      }
      res.render('index', {
           loginUser

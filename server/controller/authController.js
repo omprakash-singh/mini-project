@@ -3,6 +3,24 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
+
+// Facebook Login
+const FACEBOOK_APP_ID = '744406826987223';
+const FACEBOOK_APP_SECRET = '51886a32d05007550fa330f389010353';
+
+passport.use(new FacebookStrategy({
+     clientID: FACEBOOK_APP_ID,
+     clientSecret: FACEBOOK_APP_SECRET,
+     callbackURL: "http://localhost:9000/auth/facebook/callback"
+},
+     function (accessToken, refreshToken, profile, done) {
+          return done(null, profile);
+
+     }
+));
+
+
 
 // Google login
 const GOOGLE_CLIENT_ID = '605131150367-s9kg7jl0t4ss9so2bfdjvj25ct5osktd.apps.googleusercontent.com';
