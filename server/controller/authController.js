@@ -8,7 +8,6 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 // Facebook Login
 const FACEBOOK_APP_ID = '744406826987223';
 const FACEBOOK_APP_SECRET = '51886a32d05007550fa330f389010353';
-
 passport.use(new FacebookStrategy({
      clientID: FACEBOOK_APP_ID,
      clientSecret: FACEBOOK_APP_SECRET,
