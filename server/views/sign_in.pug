@@ -5,7 +5,8 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Document
   link(rel='stylesheet' href='CSS/design.css')
-
+  -if(sucess === false)
+    include _errorMessageStyle
 
 .container
   .img-btn
@@ -29,6 +30,8 @@ head
         hr.line
         hr.line
       p.or or
+    .errorMessageDisplay
+      h1= `${message} Please enter correct Email or password`
     form(action='/sign-in', method="post")
       input.box(type='email' placeholder='your email', name='email')
       br

@@ -13,11 +13,26 @@ Route
 Route
      .route('/sign-in')
      .get(userController.checkNotAuthenticated, userController.getUser)
-     .post(userController.checkNotAuthenticated, passport.authenticate('local', {
-          successRedirect: '/',
-          failureRedirect: '/sign-in',
-          failureFlash: true
-     }));
+     .post(function (req, res, next) {
+          passport.authenticate('local', function (err, user, info) {
+               if (err) {
+                    return next(err);
+               }
+               if (!user) {
+                    return res.render('sign_in', {
+                         sucess: false,
+                         message: 'Authentication failed'
+                    });
+               }
+               req.login(user, loginErr => {
+                    if (loginErr) {
+                         return next(loginErr);
+                    }
+                    return res.redirect('/');
+               })
+          })(req, res, next);
+     })
+
 
 Route
      .route('/sign-up')

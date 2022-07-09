@@ -260,3 +260,6 @@ input::placeholder {
 .terms a:hover {
   text-decoration: underline;
 }
+.errorMessageDisplay {
+  display: none;
+}
