@@ -5,6 +5,8 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Document
   link(rel='stylesheet' href='CSS/design.css')
+
+
 .container
   .img-btn
     .img
@@ -12,6 +14,9 @@ head
         img.image(src='img/resbuild.svg' alt='')
     .btn
       a.button(href='#') Sign in
+  -if(doc)
+    .sucessfullMessage 
+      h1=`Hello ${doc.name} thank you for sign-up please sign-in your account`
   .content
     .hearder
       h1.heading SIGN IN
