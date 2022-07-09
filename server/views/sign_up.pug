@@ -5,6 +5,8 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Document
   link(rel='stylesheet' href='CSS/design.css')
+  -if(err)
+    include _errorMessageStyle
 .container
   .img-btn
     .img
@@ -28,8 +30,9 @@ head
         hr.line
         hr.line
       p.or or
+    
     form(action='/sign-up', method='post')
-      input.box(type='text' placeholder=' Your Name', name="name")
+      input.box(type='text' placeholder=' Your Name', name="name") 
       br
       input.box(type='email' placeholder=' Your email address', name='email')
       br

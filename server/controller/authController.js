@@ -70,8 +70,9 @@ exports.sign_up_post = async (req, res) => {
                     doc
                });
           }).catch((err) => {
-               console.log(err.errors.email.message);
-               // res.redirect('/sign-up');
+               res.render('sign_up', {
+                    err
+               })
           });
      } catch (error) {
           console.log(error.name)
