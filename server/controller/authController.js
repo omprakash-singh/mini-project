@@ -1,7 +1,6 @@
 const User = require('../Model/userModel');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcryptjs');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 
@@ -18,8 +17,6 @@ passport.use(new FacebookStrategy({
 
      }
 ));
-
-
 
 // Google login
 const GOOGLE_CLIENT_ID = '605131150367-s9kg7jl0t4ss9so2bfdjvj25ct5osktd.apps.googleusercontent.com';
@@ -67,15 +64,17 @@ exports.sign_up_post = async (req, res) => {
                email: req.body.email,
                password: req.body.password,
                confirmPassword: req.body.confirmPassword
-          })
-          await postUser.save().then((doc) => {
-               console.log(doc);
-          }).catch((err) => {
-               console.log(err)
           });
-          res.redirect('/sign-in');
+          await postUser.save().then((doc) => {
+               res.render('sign_in', {
+                    doc
+               });
+          }).catch((err) => {
+               console.log(err.errors.email.message);
+               // res.redirect('/sign-up');
+          });
      } catch (error) {
-
+          console.log(error.name)
      }
 
 };

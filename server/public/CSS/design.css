@@ -168,6 +168,14 @@ input::placeholder {
 .create-one:active {
   text-decoration: underline;
 }
+.sucessfullMessage {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgb(64, 209, 64);
+}
 
 /* ************** */
 /* SIGN UP PAGE SECTION */
