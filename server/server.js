@@ -5,6 +5,7 @@ const session = require('express-session');
 const passport = require('passport');
 const route = require('./routes/Route');
 const flash = require('flash');
+const url = require('url');
 
 const app = express();
 app.set('view engine', 'pug');
@@ -25,7 +26,10 @@ app.use(flash());
 
 app.use('/', route);
 
-
-
-
 module.exports = app;
+
+
+// app.use((req, res) => {
+//      const { query } = url.parse(req.url, true);
+//      console.log(query.id)
+// })

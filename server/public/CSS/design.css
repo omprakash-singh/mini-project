@@ -262,4 +262,5 @@ input::placeholder {
 }
 .errorMessageDisplay {
   display: none;
+  text-align: center;
 }

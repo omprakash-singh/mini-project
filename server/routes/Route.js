@@ -21,7 +21,7 @@ Route
                if (!user) {
                     return res.render('sign_in', {
                          sucess: false,
-                         message: 'Authentication failed'
+                         message: 'Login failed'
                     });
                }
                req.login(user, loginErr => {
@@ -65,5 +65,10 @@ Route
      }), function (req, res) {
           res.redirect('/');
      })
+
+
+Route
+     .route('/process')
+     .get(resumeController.CheckAuth, resumeController.getProcessPage);
 
 module.exports = Route;
