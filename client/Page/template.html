@@ -1,57 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/template.css" />
-  </head>
-  <body>
-    <header class="header-class">
-      <div class="header-class-logos">
-        <div class="logo1">
-          <a href="#">
-            <img src="../img/resbuild.svg" class="lgo" alt="logo" />
-          </a>
-        </div>
-        <ul class="stepss">
-          <li class="steps-item">
-            <span class="step-number"></span>
-            <span class="steps-label">CHOOSE TEMPLATE</span>
-          </li>
-          <li class="steps-item">
-            <span class="step-number"></span>
-            <span class="steps-label">PERSONAL INFO</span>
-          </li>
-          <li class="steps-item">
-            <span class="step-number"></span>
-            <span class="steps-label">EXPERIENCE</span>
-          </li>
-          <li class="steps-item">
-            <span class="step-number"></span>
-            <span class="steps-label">EDUCATION</span>
-          </li>
-          <li class="steps-item">
-            <span class="step-number"></span>
-            <span class="steps-label">SUMMARY</span>
-          </li>
-          <li class="steps-item">
-            <span class="step-number"></span>
-            <span class="steps-label">REVIEW AND DOWNLOAD</span>
-          </li>
-        </ul>
-      </div>
-      <hr />
-      <div class="title">
-        <h1 class="h1">
-          <span class="heading-extra">CHOOSE YOUR</span>
-          RESUME TEMPLATE
-        </h1>
-        <h4 class="heading-4">
-          Remember, you can always change your template later on.
-        </h4>
-      </div>
-    </header>
-  </body>
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          .template--img img {
+               width: 300px;
+          }
+
+          .template--img {
+               transition: transform 0.5s;
+               cursor: pointer;
+               border: 1px solid rgb(207, 206, 206);
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }
+
+          .templates {
+               padding: 50px;
+               width: 100%;
+               justify-content: center;
+               align-items: center;
+               display: flex;
+               flex-wrap: wrap;
+               gap: 50px;
+               text-align: center;
+          }
+
+          .template--container {
+               padding-top: 400px;
+               padding: 50px 100px;
+          }
+
+          .template--img:hover {
+               border: 1px solid black;
+               transform: scale(1.5);
+               overflow: hidden;
+               box-shadow: 10px 10px 10px 10px burlywood;
+          }
+     </style>
+
+</head>
+
+<body>
+     <div class="template--container">
+          <div class="templates">
+               <div class="template--img-container">
+                    <div class="template--img" ">
+                         <img src=" ../img/template/template--1.jpg" alt="template--1" />
+               </div>
+               <h3>Classic</h3>
+          </div>
+          <div class="template--img-container">
+               <div class="template--img">
+                    <img src="../img/template/template--2.jpg" alt="template--1" />
+               </div>
+               <h3>Modern</h3>
+          </div>
+          <div class="template--img-container">
+               <div class="template--img">
+                    <img src="../img/template/template--3.jpg" alt="template--1" />
+               </div>
+               <h3>Pure</h3>
+          </div>
+          <div class="template--img-container">
+               <div class="template--img">
+                    <img src="../img/template/template--4.jpg" alt="template--1" />
+               </div>
+               <h3>Pro</h3>
+          </div>
+          <div class="template--img-container">
+               <div class="template--img">
+                    <img src="../img/template/template--5.jpg" alt="template--1" />
+               </div>
+               <h3>Neque</h3>
+          </div>
+     </div>
+     </div>
+</body>
+
 </html>

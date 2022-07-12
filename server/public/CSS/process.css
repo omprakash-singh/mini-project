@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.center {
+  width: 120rem;
+  margin: 0 auto;
+}
+.img1 {
+  height: 100%;
+  width: 12rem;
+}
+
+.signin-btn {
+  text-decoration: none;
+  border: 1px solid #fe8c26;
+  color: #fe8c26;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  margin-top: 2rem;
+  /* font-weight: 20px; */
+  border-radius: 4px;
+  transition: all 0.4s;
+  font-family: sans-serif;
+}
+
+.signin-btn:hover,
+.signin-btn:active {
+  background-color: #fe8c26;
+  color: #fff;
+  text-decoration: underline #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.heading-secondary {
+  text-align: center;
+  padding: 2rem;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 700;
+  margin-top: 38px;
+}
+.icon-img {
+  height: 100%;
+  width: 5rem;
+}
+.icon--img-sub {
+  width: 7rem;
+}
+
+.process1,
+.process2,
+.process3 {
+  width: 167px;
+  height: 169px;
+  /* background-color: #999; */
+  border-radius: 50%;
+  border: 1px solid #c1c0c5;
+  margin: 60px 100px;
+}
+.p1,
+.p2,
+.p3 {
+  position: relative;
+  left: 31%;
+  top: -5%;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  /* margin: 0 20px; */
+  background-color: #fff;
+  text-align: center;
+  color: #2ebe6e;
+}
+hr {
+  position: relative;
+  top: -85%;
+  left: 100%;
+  width: 237px;
+}
+.flex2 {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+.icon-img {
+  position: relative;
+  top: -34%;
+  left: 33%;
+}
+
+.s1,
+.s2,
+.s3 {
+  font-size: 16px;
+  list-style: none;
+  position: relative;
+  top: -25%;
+  font-family: sans-serif;
+  color: #222;
+
+  /* text-align: center; */
+}
+
+.s3 {
+  text-align: center;
+  display: block;
+  margin-top: 7px;
+}
+.resume-build {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 1.8rem 2rem;
+  border: none;
+  background-color: #fe8c26;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  margin: 90px;
+  text-decoration: none;
+}
+.myresume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-build:hover,
+.resume-buid:active {
+  background-color: #cf711f;
+}
+.end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

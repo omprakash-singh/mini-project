@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='CSS/process.css')
+  
+section
+  .div1
+    .center
+      .flex
+        .resume
+          a(href="/") 
+            img.img1(src='img/resbuild.svg' alt='')
+        .signin
+          a.signin-btn(href='/sign-in') Sign in
+      h2.heading-secondary
+        | BUILDING A PERFECT RESUME HAS NEVER BEEN THIS EASY!
+      // step1
+      .flex2
+        .process1
+          p.p1 1
+          img.icon-img(src='img/icon1.svg' alt='icon')
+          hr
+          span.s1 Choose a professional resume template
+        // step2
+        .process2
+          p.p2 2
+          img.icon-img.icon--img-sub(src='img/icon2.svg' alt='')
+          hr
+          span.s2 Build your resume using our pre-written examples
+        // step3
+        .process3
+          p.p3 3
+          img.icon-img(src='img/icon3.svg' alt='')
+          span.s3 Download your resume and start impressing employers
+      .myresume
+        a(href="/form").resume-build BUILD MY RESUME

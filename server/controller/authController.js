@@ -14,7 +14,6 @@ passport.use(new FacebookStrategy({
 },
      function (accessToken, refreshToken, profile, done) {
           return done(null, profile);
-
      }
 ));
 
@@ -74,9 +73,13 @@ exports.sign_up_post = async (req, res) => {
                     err
                })
           });
+
      } catch (error) {
           console.log(error.name)
      }
 
 };
+
+
+
 

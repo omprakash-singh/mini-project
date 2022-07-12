@@ -2,6 +2,7 @@ const passport = require('passport');
 const session = require('express-session');
 const resume = require('../Model/resumeModel');
 const USERGOOGLEFB = require('../Model/userGoogleFBModel');
+const User = require('../Model/userModel');
 
 exports.GetHomePage = async (req, res) => {
      let loginUser = null
@@ -26,6 +27,30 @@ exports.GetHomePage = async (req, res) => {
      });
 }
 
+exports.getProcessPage = (req, res) => {
+     res.render('process')
+}
+
+exports.CheckAuth = (req, res, next) => {
+     if (req.isAuthenticated()) {
+          next();
+     } else {
+          res.redirect('/sign-in');
+     }
+}
+
+exports.getTemplatePage = (req, res) => {
+     res.render('template_form_review');
+}
+
+exports.getForm = (req, res) => {
+     res.render('form');
+}
+
+exports.postForm = (req, res) => {
+     console.log(req.body);
+}
+
 const Post_user_detail = async (req, res) => {
      await resume.create(req.body, function (err, doc) {
           if (err) {
@@ -35,3 +60,4 @@ const Post_user_detail = async (req, res) => {
           }
      })
 }
+

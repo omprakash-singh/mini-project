@@ -34,9 +34,9 @@ head
     form(action='/sign-up', method='post')
       input.box(type='text' placeholder=' Your Name', name="name") 
       br
-      input.box(type='email' placeholder=' Your email address', name='email')
+      input.box(class='email' ,type='email' placeholder=' Your email address', name='email')
       br
-      input.box(type='Password' placeholder=' Set Your Password' , name='password')
+      input.box(class="pass", type='Password' placeholder=' Set Your Password' , name='password')
       br
       input.box(type='Password' placeholder=' conform Your Password', name='confirmPassword')
       br
@@ -47,4 +47,5 @@ head
       footer
         p.have-an-account
           | Already have an account?
-          a.sign-to-page(href='/sign-in') Sign in
+          a.sign-to-page(href='/sign-in') Sign in 
+
