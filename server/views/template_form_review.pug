@@ -1,0 +1,78 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  style.
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    html {
+    font-size: 62.5%;
+    }
+    .header-class {
+    width: 120rem;
+    margin: 2rem auto;
+    }
+    .header-class-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .lgo {
+    height: auto;
+    width: 12rem;
+    }
+    .step-number {
+    border: 1px solid #c1c0c5;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 1;
+    font-size: 90%;
+    margin-right: 1rem;
+    }
+    */ hr {
+    margin-top: 2rem;
+    }
+    .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .heading-extra {
+    font-weight: normal;
+    }
+    .h1 {
+    font-family: sans-serif;
+    font-size: 2.6rem;
+    margin: 4rem 0 1rem 0;
+    letter-spacing: 1;
+    }
+    .heading-4 {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    font-weight: normal;
+    }
+header.header-class
+  .header-class-logos
+    .logo1
+      a(href='/')
+        img.lgo(src='img/resbuild.svg' alt='logo')
+  hr
+  .title
+    h1.h1
+      span.heading-extra CHOOSE YOUR
+      |         RESUME TEMPLATE
+    h4.heading-4
+      | Remember, you can always change your template later on.
+
+include _template

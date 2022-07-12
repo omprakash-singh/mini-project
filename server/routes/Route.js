@@ -71,4 +71,13 @@ Route
      .route('/process')
      .get(resumeController.CheckAuth, resumeController.getProcessPage);
 
+Route
+     .route('/template')
+     .get(userController.checkAuthenticated, resumeController.getTemplatePage)
+
+Route
+     .route('/form')
+     .get(userController.checkAuthenticated, resumeController.getForm)
+     .post(userController.checkAuthenticated, resumeController.postForm);
+
 module.exports = Route;

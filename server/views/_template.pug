@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  style.
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .template--img img {
+    width: 300px;
+    }
+    .template--img {
+    transition: transform 0.5s;
+    cursor: pointer;
+    border: 1px solid rgb(207, 206, 206);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .templates {
+    padding: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    text-align: center;
+    }
+    .template--container {
+    padding-top: 400px;
+    padding: 50px 100px;
+    }
+    .template--img:hover {
+    border: 1px solid black;
+    transform: scale(1.5);
+    overflow: hidden;
+    box-shadow: 10px 10px 10px 10px burlywood;
+    }
+.template--container
+  .templates
+    .template--img-container
+      .template--img
+        img(src='img/template/template--1.jpg' alt='template--1')
+      h3 Classic
+    .template--img-container
+      .template--img
+        img(src='img/template/template--2.jpg' alt='template--1')
+      h3 Modern
+    .template--img-container
+      .template--img
+        img(src='img/template/template--3.jpg' alt='template--1')
+      h3 Pure
+    .template--img-container
+      .template--img
+        img(src='img/template/template--4.jpg' alt='template--1')
+      h3 Pro
+    .template--img-container
+      .template--img
+        img(src='img/template/template--5.jpg' alt='template--1')
+      h3 Neque

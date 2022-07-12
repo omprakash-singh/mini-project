@@ -7,7 +7,7 @@ const User = require('../Model/userModel');
 exports.GetHomePage = async (req, res) => {
      let loginUser = null
      if (req.session.passport != null) {
-
+          loginUser = req.session.passport.user;
           if (req.session.passport.user.provider != null) {
                await USERGOOGLEFB.findOrCreate({
                     googleID: req.session.passport.user._json.sub,
@@ -37,6 +37,18 @@ exports.CheckAuth = (req, res, next) => {
      } else {
           res.redirect('/sign-in');
      }
+}
+
+exports.getTemplatePage = (req, res) => {
+     res.render('template_form_review');
+}
+
+exports.getForm = (req, res) => {
+     res.render('form');
+}
+
+exports.postForm = (req, res) => {
+     console.log(req.body);
 }
 
 const Post_user_detail = async (req, res) => {

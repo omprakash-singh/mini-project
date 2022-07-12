@@ -126,6 +126,7 @@ hr {
   letter-spacing: 1px;
   border-radius: 4px;
   margin: 90px;
+  text-decoration: none;
 }
 .myresume {
   display: flex;
