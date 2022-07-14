@@ -2,108 +2,101 @@ const mongoose = require('mongoose');
 
 
 const resumeSchema = new mongoose.Schema({
-     firstname: {
-          type: String,
-          required: [true, 'Please enter first name!']
+     fname: {
+          type: String
      },
-     lastname: {
-          type: String,
-          required: [true, 'Please enter last name!']
+     lname: {
+          type: String
      },
      address: {
-          type: String,
-          required: [true, 'Please Enter Address!']
+          type: String
      },
      city: {
-          type: String,
-          required: [true, 'Please enter city!']
+          type: String
      },
-     ZIPcode: {
-          type: Number,
-          required: [true, 'Please enter ZIP code!']
+     zipcode: {
+          type: String
      },
      country: {
-          type: String,
-          required: [true, 'please enter your country']
+          type: String
+     },
+     email: {
+          type: String
      },
      phone: {
-          type: String,
-          required: [true, 'please enter your phone number!']
+          type: String
      },
      employer: {
           type: String
      },
-     Jobtitle: {
+     jobtitle: {
           type: String
      },
-     employeCity: {
+     jobcity: {
           type: String
      },
-     employeState: {
+     jobstate: {
           type: String
      },
-     employeStartdate: {
+     jobstartdate: {
           type: String
      },
-     employeEnddate: {
+     jobenddate: {
           type: String
      },
-     Jobdescription: {
+     schoolname: {
           type: String
      },
-     SchoolName: {
+     schoolcity: {
           type: String
      },
-     eductionCity: {
+     schoolstate: {
           type: String
      },
-     eductionState: {
+     schooldegree: {
           type: String
      },
-     eductionDegree: {
+     fieldofstudy: {
           type: String
      },
-     Fieldofstudy: {
-          type: String
-     },
-     Graduationdate: {
+     gdate: {
           type: String
      },
      skill1: {
-          type: String,
-          required: [true, 'Enter skill']
+          type: String
      },
-     skill1Level: {
-          type: String,
-          required: [true, 'Enter skill level']
+     skill1level: {
+          type: String
      },
      skill2: {
           type: String
      },
-     skill2Level: {
+     skill2level: {
           type: String
      },
      skill3: {
           type: String
      },
-     skill3Level: {
+     skill3level: {
           type: String
      },
      skill4: {
           type: String
      },
-     skill4Level: {
+     skill4level: {
           type: String
      },
      skill5: {
           type: String
      },
-     skill5Level: {
+     skill5level: {
           type: String
      },
      summary: {
-          type: String,
-          required: [true, 'Please Enter Summary!']
+          type: String
+     },
+     userId: {
+          type: String
      }
 })
 

@@ -39,7 +39,7 @@ async function authenticateUser(email, password, done) {
      }
      try {
           if (await user.correctPassword(password, user.password)) {
-               return done(null, user.id);
+               return done(null, user);
           } else {
                return done(null, false, { message: "incorrect email and password!" });
           }
