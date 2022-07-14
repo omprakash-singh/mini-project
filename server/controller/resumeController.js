@@ -44,20 +44,28 @@ exports.getTemplatePage = (req, res) => {
 }
 
 exports.getForm = (req, res) => {
-     res.render('form');
+     if (req.session.passport.user.provider === undefined) {
+          const userId = req.session.passport.user._id;
+          res.render('form', { userId });
+     } else {
+          console.log(req.session.passport.user.id);
+          const userId = req.session.passport.user.id;
+          res.render('form', { userId });
+
+     }
 }
 
-exports.postForm = (req, res) => {
-     console.log(req.body);
-}
+exports.postForm = async (req, res) => {
 
-const Post_user_detail = async (req, res) => {
-     await resume.create(req.body, function (err, doc) {
-          if (err) {
-               console.log(err);
-          } else {
-               console.log(doc);
-          }
+     const resumeDatapost = new resume(req.body);
+
+     await resumeDatapost.save().then((doc) => {
+          console.log(doc);
+          res.redirect('/template');
+     }).catch((err) => {
+          console.log(err);
      })
+     console.log(req.body)
 }
+
 
