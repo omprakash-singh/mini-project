@@ -80,4 +80,9 @@ Route
      .get(userController.checkAuthenticated, resumeController.getForm)
      .post(userController.checkAuthenticated, resumeController.postForm);
 
+
+Route.route('*').get(userController.checkAuthenticated, resumeController.DownLoadTemplate)
+
+Route.route('/resume').get(userController.checkAuthenticated, resumeController.getResume)
+
 module.exports = Route;

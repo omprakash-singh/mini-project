@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const findOrCreate = require('mongoose-findorcreate');
 
 
 const resumeSchema = new mongoose.Schema({
@@ -96,9 +97,12 @@ const resumeSchema = new mongoose.Schema({
           type: String
      },
      userId: {
-          type: String
+          type: String,
+          unique: true,
      }
 })
+
+resumeSchema.plugin(findOrCreate);
 
 const RESUME = mongoose.model('RESUME', resumeSchema);
 

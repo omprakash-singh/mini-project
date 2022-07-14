@@ -3,6 +3,7 @@ const session = require('express-session');
 const resume = require('../Model/resumeModel');
 const USERGOOGLEFB = require('../Model/userGoogleFBModel');
 const User = require('../Model/userModel');
+const url = require('url');
 
 exports.GetHomePage = async (req, res) => {
      let loginUser = null
@@ -57,15 +58,56 @@ exports.getForm = (req, res) => {
 
 exports.postForm = async (req, res) => {
 
-     const resumeDatapost = new resume(req.body);
-
-     await resumeDatapost.save().then((doc) => {
+     await resume.findOrCreate(req.body).then((doc) => {
           console.log(doc);
           res.redirect('/template');
      }).catch((err) => {
           console.log(err);
      })
-     console.log(req.body)
+
+}
+
+exports.getResume = async (req, res) => {
+
+     let userId;
+
+     if (req.session.passport.user.provider === undefined) {
+          userId = req.session.passport.user._id;
+     } else {
+          console.log(req.session.passport.user.id);
+          userId = req.session.passport.user.id;
+     }
+
+     const data = await resume.find({ userId });
+
+     // res.render('resume', { data });
+
+}
+
+exports.DownLoadTemplate = async (req, res) => {
+
+     if (req.url === '/template--1') {
+
+          let userId;
+
+          if (req.session.passport.user.provider === undefined) {
+               userId = req.session.passport.user._id;
+          } else {
+               console.log(req.session.passport.user.id);
+               userId = req.session.passport.user.id;
+          }
+
+          const data = await resume.find({ userId });
+
+          const path = req.url;
+
+          const SetCSS = path.replace('/', '')
+          res.render('resume', {
+               data,
+               SetCSS
+          });
+
+     }
 }
 
 
